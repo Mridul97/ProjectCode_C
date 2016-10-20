@@ -2,7 +2,7 @@
 
 Contribute to any of the following listed Algorithm in C or C++.
 You can also raise issue if anyone else has submitted a code of any of following algorithm.
-
+ 
 1.Reversing A String
 2.Tower Of Hanoi
 3.Linear Search
