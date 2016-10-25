@@ -1,13 +1,13 @@
 
 
-// LINEAR SEARCH
+//  BUBBLE SORT
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    int i,t,a[100],s,flag;
+    int i,t,temp,flag,a[100];
 
     cout<<"Enter the number of elements in the array :";
     cin>>t;
@@ -19,30 +19,31 @@ int main()
         cin>>a[i];
     }
 
-    cout<<endl<<"Enter the element to search for :";
-    cin>>s;
+    //IMPLEMENTING BUBBLE SORT
 
-    //IMPLEMENTING LINEAR SEARCH
+    do
+    {
+        flag = 0;
 
-    flag = 0;
+        for(i=0;i<t-1;i++)
+        {
+
+            if(a[i+1]<a[i])
+            {
+                temp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=temp;
+                flag = 1;
+            }
+        }
+    }while(flag==1);
+
+    cout<<endl<<"The sorted array is :"<<endl;
 
     for(i=0;i<t;i++)
     {
-        if(s==a[i])
-        {
-             cout<<endl<<"The element is found at position :"<<i + 1;
-             flag=1;
-        }
-
+        cout<<a[i]<<endl;
     }
-
-    if(flag==0)
-    {
-        cout<<endl<<"The element "<<s<<" does not exist in the array.";
-    }
-
-
-
     return 0;
 }
 
